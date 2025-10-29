@@ -273,6 +273,33 @@ body, html {
     pointer-events: none;
 }
 
+/* Disclaimer */
+.disclaimer {
+    width: 100%;
+    background-color: #000000;
+    padding: 15px 20px;
+    z-index: 1500;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.disclaimer p {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.disclaimer a {
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.disclaimer a:hover {
+    color: #2ecc71;
+}
+
 /* Start overlay */
 .start-overlay {
     position: absolute;
@@ -315,4 +342,32 @@ body, html {
 
 .start-button:active {
     transform: scale(0.98);
+}
+
+.start-button:disabled {
+    cursor: default;
+    background-color: #27ae60;
+    transform: scale(1);
+}
+
+.start-button:disabled:hover {
+    background-color: #27ae60;
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile landscape adjustments */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .bottom {
+        height: 60px;
+    }
+
+    .bottom .number {
+        font-size: 40px;
+    }
+
+    .disclaimer p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
 }
