@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="countdown-main">
+            <div class="countdown left" id="leftCountdown">
+                <span class="number">15</span>
+            </div>
+            <div class="countdown right" id="rightCountdown">
+                <span class="number">20</span>
+            </div>
+        </div>
+        <div class="countdown bottom" id="bottomCountdown">
+            <span class="number">12</span>
+        </div>
+        <button class="mute-button left-mute" id="leftMuteButton">
+            <img class="mute-icon" src="icons/volume.png" alt="Mute">
+        </button>
+        <button class="mute-button right-mute" id="rightMuteButton">
+            <img class="mute-icon" src="icons/volume-white.png" alt="Mute">
+        </button>
+        <div class="disclaimer">
+            <p>Note: Helbreath Olympia regeneration ticks are not perfectly synchronized with client-side timers. The timers may periodically drift out of sync but will naturally realign with server regeneration over time. <a href="#" id="resetTimer">Click here to reset the timers</a></p>
+        </div>
+        <div class="start-overlay" id="startOverlay">
+            <button class="start-button" id="startButton">START</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
